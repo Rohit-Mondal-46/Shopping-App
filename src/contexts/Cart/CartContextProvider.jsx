@@ -1,7 +1,7 @@
 import React,{useContext, useReducer} from "react";
 import cartContext from "./CartContext";
 import { faker } from "@faker-js/faker";
-import { cartReducer, filterReducer } from "./reducers";
+import { cartReducer, filterReducer } from "../reducers";
 faker.seed(20)
 const CartContextProvider = ({children})=>{
     const list = [...Array(20)].map(()=>({

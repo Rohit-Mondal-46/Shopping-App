@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import Ratings from "./Ratings";
-import { useCart } from "../contexts/CartContextProvider";
+import { useCart } from "../contexts/Cart/CartContextProvider";
 
 function Filters() {
-  const {filterState,filterDispatch} = useCart();
+  const { filterState, filterDispatch } = useCart();
   console.log(filterState);
   return (
     <>
-      <div className="flex flex-col w-72 h-full p-3 m-4 bg-slate-400">
-        <span className="text-2xl mb-3 font-bold text-center">Filter Products</span>
+      <div className="flex flex-col w-72 h-full p-4 m-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg shadow-lg">
+        <span className="text-2xl mb-4 font-bold text-center">Filter Products</span>
         
-        <form className="space-y-4"
-        onSubmit={(e)=>e.preventDefault()}
-        >
+        <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
           <div>
             <input
                 type="checkbox"
